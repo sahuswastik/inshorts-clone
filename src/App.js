@@ -3,7 +3,6 @@ import "./App.css";
 import NavInshorts from "./components/NavInshorts";
 import NewsContent from "./components/NewsContent/NewsContent";
 import axios from "axios";
-import apiKey from "./data/config";
 import Footer from "./components/Footer/Footer";
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
   const newsApi = async () => {
     try {
       const news = await axios.get(
-        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=${category}&pageSize=${loadmore}`
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${process.env.REACT_APP_API_KEY}&pageSize=${loadmore}&category=${category}`
       );
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);

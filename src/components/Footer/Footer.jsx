@@ -27,7 +27,7 @@ const Footer = () => {
         >
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
-        <a href="https://bucolic-duckanoo-94bc68.netlify.app/" target="__blank">
+        <a href="https://ss-portfolio-website.netlify.app/" target="__blank">
           <i className="fas fa-link fa-2x"></i>
         </a>
       </div>
