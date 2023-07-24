@@ -14,9 +14,9 @@ function App() {
 
   const newsApi = async () => {
     try {
-      const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+      // const proxyUrl = "https://cors-anywhere.herokuapp.com/";
       const news = await axios.get(
-        `https://${proxyUrl}newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=${category}&pageSize=${loadmore}`
+        `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}&category=${category}&pageSize=${loadmore}`
       );
       setNewsArray(news.data.articles);
       setNewsResults(news.data.totalResults);
